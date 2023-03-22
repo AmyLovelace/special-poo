@@ -10,9 +10,10 @@ class employee:
 #class is a blueprint for creating instances each employee will be instances of the employee class
 emp_1 = employee('Ami','Cabrera',50000)
 emp_2 = employee('Tomi','Cabrera',45000)
+emp_3 = employee('adel','Cabrera',60000)
 print(emp_1.email)
 print(emp_2.email)
 
-print(employee.fullname(emp_1))
-
-
+#print(employee.fullname(emp_1))
+print(employee.fullname(emp_3))
+print(emp_3.email)
