@@ -22,15 +22,22 @@ class Employee:
     @classmethod #esto nos ayuda tomar la clase como el argument(self a cls(class))
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
+    
+    @classmethod
+    def from_string(cls,emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
 
 #class is a blueprint for creating instances each employee will be instances of the employee class
 emp_1 = Employee('Ami','Cabrera',50000)
 emp_2 = Employee('Tomi','Cabrera',45000)
 emp_3 = Employee('adel','Cabrera',60000)
 
-Employee.set_raise_amt(1.05)
+emp_str_1 = "ami-sauria-70000"
+emp_str_2 = "copito-nevoso-30000"
+emp_str_3 = "el-potito-90000"
 
-print(Employee.raise_amt)
-print(emp_1.raise_amt)
-print(emp_2.raise_amt)
-print(emp_3.raise_amt)
+new_emp_2 = Employee.from_string(emp_str_2)
+
+print(new_emp_2.email)
+print(new_emp_2.pay)
