@@ -52,8 +52,8 @@ mgr_1.remove_emp(dev_1)
 
 mgr_1.print_emps()
 
-print(isinstance(mgr_1,Manager))#para ver si pertenece a una instancia de clase (instancia sospechosa,clase )
-print(issubclass(Developer,Employee))
+print(isinstance(mgr_1,Manager))#para ver si pertenece a una instancia de clase (instancia sospechosa,clase o subclase )
+print(issubclass(Developer,Employee))#para ver si es una subclase (subclase sospechosa,clase )
 
 
 
