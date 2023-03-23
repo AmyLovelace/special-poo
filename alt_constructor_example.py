@@ -24,7 +24,7 @@ class Employee:
         cls.raise_amt = amount
     
     @classmethod
-    def from_string(cls,emp_str):
+    def from_string(cls,emp_str):#aqui utilizando el emp_str para separar la str gracias al .split de esta manera no vamos a poner cada instancia eb la funcion
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
 
