@@ -8,5 +8,5 @@ def fizz_Buzz(n):
             print("buzz")
         else:
             print(i)
-print(fizz_Buzz(101))
+print(fizz_Buzz(100))
             
