@@ -27,17 +27,18 @@ class Employee:
     def from_string(cls,emp_str):#aqui utilizando el emp_str para separar la str gracias al .split de esta manera no vamos a poner cada instancia eb la funcion
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
+    @staticmethod
+    def is_workday(day):
+        if day.weekday()== 5 or day.weekday()== 6 :
+            return False
+        return True
+        
 
 #class is a blueprint for creating instances each employee will be instances of the employee class
 emp_1 = Employee('Ami','Cabrera',50000)
 emp_2 = Employee('Tomi','Cabrera',45000)
 emp_3 = Employee('adel','Cabrera',60000)
 
-emp_str_1 = "ami-sauria-70000"
-emp_str_2 = "copito-nevoso-30000"
-emp_str_3 = "el-potito-90000"
-
-new_emp_2 = Employee.from_string(emp_str_2)
-
-print(new_emp_2.email)
-print(new_emp_2.pay)
+import datetime
+my_date = datetime.date(2023, 3, 23)
+print(Employee.is_workday(my_date))
