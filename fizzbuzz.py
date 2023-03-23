@@ -8,10 +8,4 @@ for number in range(1,101):
         print("buzz")
     else:
         print(number)
-     
-
-
-            
-
-
     
