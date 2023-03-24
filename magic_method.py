@@ -21,10 +21,16 @@ class Employee:
     def __str__(self):#representacion leible del objeto,para ser leida por el usuario
         return'{} - {}'.format(self.fullname(),self.email)
 
+    def __add__(self,other):
+        return self.pay + other.pay
 
 emp_1 = Employee('Ami','Cabrera',50000)
 emp_2 = Employee('Adel','Cabrera',60000)
-
+print(emp_1 + emp_2)
 #print(emp_1)
-print(repr(emp_1))
-print(str(emp_1))
+#print(repr(emp_1))
+#print(str(emp_1))
+
+#print(emp_1.__repr__())
+#print(emp_1.__str__())
+
