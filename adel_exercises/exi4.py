@@ -6,6 +6,6 @@ def sueldo ():
     horas = int(input("Introduce tus horas de trabajo: "))
     coste = int(input("Introduce lo que cobras por hora: "))
     salario = horas * coste
-    print("Tu paga es", salario)
-    
+    print("Tu paga es", salario)   
+
 sueldo()
