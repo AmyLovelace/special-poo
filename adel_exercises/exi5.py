@@ -3,11 +3,9 @@
 #es el índice de masa corporal calculado redondeado con dos decimales.
 #peso en kilogramos dividido por la estatura en metros cuadrados(o altura*altura)
 
-def bmi ():
-    altura =input("Introduce tu altura metros: ")
-    peso = input("Introduce tu peso: ")
-    imc = round(float(peso) / float(altura)**2)
-    print("Tu bmi es :"+str(imc) )   
+def bmi(altura, peso,edad=28):
+    imc = round(float(peso) / (float(altura)*float(altura)))
+    print(f"Tu bmi es :{imc}")   
     if imc <18 :
         print("Tienes bajo peso")
     elif imc >=18 and imc<25:
@@ -20,4 +18,5 @@ def bmi ():
         print("Tienes obesidad grado II")
     elif imc >=40:
         print("Tienes grado III Obesidad Mórbida")
-bmi()
+bmi(1.50,75)
+bmi(peso=75, altura=1.50)
